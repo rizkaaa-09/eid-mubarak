@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  font-family: cursive;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  background: linear-gradient(#ffeb3b, #e91e63);
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: 1050px;
+  }
+}
+
+.mosque:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 550px;
+  background: url(../img/mosque.png);
+  background-repeat: repeat-x;
+  background-size: 1600px;
+  z-index: 1;
+  opacity: 0.1;
+  pointer-events: none;
+  animation: animateReverse 16s linear infinite;
+}
+
+@keyframes animateReverse {
+  0% {
+    background-position: 1600px;
+  }
+  100% {
+    background-position: 0px;
+  }
+}
+
+.particles-js-canvas-el {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 970px) {
+  p {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  section h1:before {
+    top: -30px;
+    left: -60px;
+    width: 380px;
+    height: 380px;
+    transform: rotate(-18deg);
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .text-center {
+    width: max-content;
+    margin: 40px auto 0 auto;
+    text-shadow: 2px 2px black;
+  }
+}
+
+
+p {
+  font-size: 3vw;
+  background-color: black;
+  padding: 4px;
+  border-radius: 20px;
+}
+.container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+}
+
+.text-animate {
+  /* overflow: hidden; */
+
+  border-right: 0.15em solid black;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 1s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: orange;
+  }
+}
+
+.image-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.text-center {
+  width: max-content;
+  margin: 40px auto 0 auto;
+  text-shadow: 2px 2px black;
+}
+
+.next {
+  background-color: black;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
